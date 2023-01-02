@@ -22,7 +22,6 @@ import (
 	"encoding/base64"
 	"encoding/binary"
 	"fmt"
-	"log"
 	"math/rand"
 	"sync/atomic"
 	"time"
@@ -54,7 +53,6 @@ func FromTime(t time.Time) ID {
 	r = binary.BigEndian.AppendUint64(r, p1)
 	r = binary.BigEndian.AppendUint64(r, p2)
 	r = binary.BigEndian.AppendUint64(r, p3)
-	log.Println(r)
 	return r
 }
 
